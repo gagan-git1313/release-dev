@@ -1,1 +1,14 @@
-
+spring:
+  application:
+    name: config-server
+eureka:
+  client:
+    # Eureka Server connection
+    service-url:
+      defaultZone: http://localhost:8084/eureka  # Eureka server URL
+    
+    # Registration behavior
+    register-with-eureka: true    # Should register itself (default: true)
+    fetch-registry: true
+  instance:
+    hostname: localhost
